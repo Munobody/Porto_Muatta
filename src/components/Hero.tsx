@@ -80,10 +80,19 @@ export default function Hero() {
 
               <a
                 href="#kontak"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-600 text-slate-200 font-medium text-sm sm:text-base transition-all duration-200"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-600 text-slate-200 font-medium text-sm transition-all duration-200"
               >
                 <MessageSquare className="w-4 h-4 text-indigo-400" />
                 <span>Mulai Diskusi</span>
+              </a>
+
+              <a
+                href={`mailto:${portfolioData.personal.email}?subject=Permintaan%20CV%20-%20Muatta%20Muhariq`}
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 text-slate-300 hover:text-white text-sm transition"
+                title="Kirim permintaan dokumen CV via email"
+              >
+                <Download className="w-4 h-4 text-purple-400" />
+                <span>Minta CV</span>
               </a>
 
               <button
