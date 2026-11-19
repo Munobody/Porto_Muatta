@@ -17,30 +17,33 @@ export default function Experience() {
   const [activeMode, setActiveMode] = useState<"experience" | "organization">("experience");
 
   return (
-    <section id="pengalaman" className="py-20 md:py-28 relative bg-slate-950/40 border-t border-slate-900">
+    <section id="pengalaman" className="py-20 md:py-28 relative border-t border-white/5">
+      {/* Background ambient lighting */}
+      <div className="absolute top-1/2 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-950/60 border border-indigo-500/20 text-indigo-400 text-xs font-semibold tracking-wide uppercase mb-3">
-            <Briefcase className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill text-indigo-300 text-xs font-semibold tracking-wide uppercase mb-3 shadow-sm">
+            <Briefcase className="w-3.5 h-3.5 text-indigo-400" />
             <span>Rekam Jejak & Kontribusi</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
             Pengalaman Kerja & Kepemimpinan
           </h2>
-          <p className="mt-4 text-slate-400 text-base sm:text-lg">
+          <p className="mt-4 text-slate-300 text-base sm:text-lg font-normal">
             Kombinasi pengalaman asisten laboratorium, program industri Bangkit by Google, serta kepemimpinan di himpunan mahasiswa.
           </p>
 
           {/* Toggle Button between Work Experience & Organizational Leadership */}
-          <div className="mt-8 inline-flex p-1.5 rounded-2xl bg-slate-900 border border-slate-800 shadow-inner">
+          <div className="mt-8 inline-flex p-1.5 rounded-2xl glass-panel shadow-xl">
             <button
               type="button"
               onClick={() => setActiveMode("experience")}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeMode === "experience"
-                  ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/30"
-                  : "text-slate-400 hover:text-white"
+                  ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/40 border border-indigo-400/40"
+                  : "text-slate-300 hover:text-white"
               }`}
             >
               <Briefcase className="w-4 h-4" />
@@ -51,8 +54,8 @@ export default function Experience() {
               onClick={() => setActiveMode("organization")}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeMode === "organization"
-                  ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/30"
-                  : "text-slate-400 hover:text-white"
+                  ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/40 border border-indigo-400/40"
+                  : "text-slate-300 hover:text-white"
               }`}
             >
               <Users className="w-4 h-4" />
@@ -91,14 +94,14 @@ export default function Experience() {
                         isEven ? "md:pr-12" : "md:pl-12"
                       }`}
                     >
-                      <div className="p-6 sm:p-7 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-indigo-500/40 transition-all duration-300 shadow-xl shadow-black/20">
+                      <div className="p-6 sm:p-7 rounded-3xl glass-card">
                         {/* Period & Type */}
                         <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-950/80 border border-indigo-500/30 text-indigo-300 text-xs font-semibold">
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full glass-pill text-indigo-300 text-xs font-semibold">
                             <Calendar className="w-3.5 h-3.5" />
                             {exp.period}
                           </span>
-                          <span className="text-xs text-slate-400 font-medium px-2 py-0.5 rounded bg-slate-800">
+                          <span className="text-xs text-slate-300 font-medium px-2.5 py-0.5 rounded-lg glass-pill">
                             {exp.type}
                           </span>
                         </div>

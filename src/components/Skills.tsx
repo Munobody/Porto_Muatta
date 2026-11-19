@@ -27,18 +27,22 @@ export default function Skills() {
   const currentCategory: SkillCategory = portfolioData.skillCategories[activeTab];
 
   return (
-    <section id="keahlian" className="py-20 md:py-28 relative bg-slate-950/40 border-t border-slate-900">
+    <section id="keahlian" className="py-20 md:py-28 relative border-t border-white/5">
+      {/* Ambient glow */}
+      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[130px] pointer-events-none -z-10" />
+      <div className="absolute bottom-10 left-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none -z-10" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-950/60 border border-indigo-500/20 text-indigo-400 text-xs font-semibold tracking-wide uppercase mb-3">
-            <Cpu className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill text-indigo-300 text-xs font-semibold tracking-wide uppercase mb-3 shadow-sm">
+            <Cpu className="w-3.5 h-3.5 text-indigo-400" />
             <span>Keahlian & Spesialisasi</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
             Keterampilan Teknis & Tools
           </h2>
-          <p className="mt-4 text-slate-400 text-base sm:text-lg">
+          <p className="mt-4 text-slate-300 text-base sm:text-lg font-normal">
             Kombinasi bahasa pemrograman, framework modern, metodologi agile, dan perkakas desain yang terasah dari proyek nyata dan pengajaran laboratorium.
           </p>
         </div>
@@ -50,10 +54,10 @@ export default function Skills() {
               key={cat.category}
               onClick={() => setActiveTab(idx)}
               type="button"
-              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer ${
+              className={`flex items-center gap-2 px-5 py-3 rounded-2xl text-sm font-medium transition-all duration-200 cursor-pointer ${
                 activeTab === idx
-                  ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 scale-105"
-                  : "bg-slate-900/80 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800/80"
+                  ? "bg-indigo-600 text-white shadow-xl shadow-indigo-600/35 scale-105 border border-indigo-400/40"
+                  : "glass-card text-slate-300 hover:text-white hover:border-white/20"
               }`}
             >
               {categoryIcons[cat.category] || <Layers className="w-5 h-5" />}
@@ -67,22 +71,24 @@ export default function Skills() {
           {currentCategory.skills.map((skill) => (
             <div
               key={skill.name}
-              className="p-6 rounded-2xl bg-gradient-to-b from-slate-900/80 to-slate-950/90 border border-slate-800 hover:border-indigo-500/30 transition-all duration-200 group"
+              className="p-6 rounded-3xl glass-card flex flex-col justify-between"
             >
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-2.5 h-2.5 rounded-full bg-indigo-400 group-hover:scale-125 transition-transform" />
-                  <h3 className="text-base font-semibold text-white group-hover:text-indigo-300 transition-colors">
-                    {skill.name}
-                  </h3>
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-2.5 h-2.5 rounded-full bg-indigo-400 group-hover:scale-125 transition-transform" />
+                    <h3 className="text-base font-semibold text-white group-hover:text-indigo-300 transition-colors">
+                      {skill.name}
+                    </h3>
+                  </div>
+                  <span className="text-[11px] font-medium px-2.5 py-1 rounded-lg glass-pill text-indigo-300 border border-indigo-500/20">
+                    {skill.level}
+                  </span>
                 </div>
-                <span className="text-[11px] font-medium px-2.5 py-1 rounded-md bg-indigo-950/80 text-indigo-300 border border-indigo-500/20">
-                  {skill.level}
-                </span>
+                <p className="text-sm text-slate-300 leading-relaxed font-normal">
+                  {skill.description}
+                </p>
               </div>
-              <p className="text-sm text-slate-400 leading-relaxed">
-                {skill.description}
-              </p>
             </div>
           ))}
         </div>

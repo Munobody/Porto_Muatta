@@ -29,7 +29,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-black/20 py-3"
+          ? "bg-slate-950/70 backdrop-blur-2xl border-b border-white/10 shadow-xl shadow-black/30 py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -55,12 +55,12 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 lg:gap-2 bg-slate-900/60 border border-slate-800/80 rounded-full px-4 py-1.5 backdrop-blur-sm">
+          <nav className="hidden md:flex items-center gap-1 lg:gap-2 glass-pill rounded-full px-4 py-1.5 backdrop-blur-xl border border-white/10 shadow-lg">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-full transition-all duration-200"
+                className="px-3 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all duration-200"
               >
                 {link.label}
               </a>
@@ -69,7 +69,7 @@ export default function Navbar() {
 
           {/* Right Action & Status Badge */}
           <div className="hidden sm:flex items-center gap-3">
-            <div className="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
+            <div className="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full glass-pill border border-emerald-500/30 text-emerald-400 text-xs font-medium">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping inline-block" />
               <span>Open to work</span>
             </div>
@@ -88,7 +88,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white focus:outline-none"
+              className="p-2 rounded-lg glass-card text-slate-300 hover:text-white focus:outline-none"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -99,13 +99,13 @@ export default function Navbar() {
 
       {/* Mobile menu dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-slate-950/95 border-b border-slate-800/80 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3 transition-all animate-in fade-in slide-in-from-top-4 duration-200">
-          <div className="flex items-center justify-between pb-2 border-b border-slate-800/60">
+        <div className="md:hidden bg-slate-950/90 border-b border-white/10 backdrop-blur-2xl px-4 pt-3 pb-6 space-y-3 transition-all animate-in fade-in slide-in-from-top-4 duration-200">
+          <div className="flex items-center justify-between pb-2 border-b border-white/10">
             <div className="flex items-center gap-2 text-xs text-emerald-400 font-medium">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               <span>Available for projects</span>
             </div>
-            <span className="text-xs text-slate-500">{portfolioData.personal.location}</span>
+            <span className="text-xs text-slate-400">{portfolioData.personal.location}</span>
           </div>
           <div className="flex flex-col space-y-1">
             {navLinks.map((link) => (
@@ -113,7 +113,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="px-3 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-900 transition"
+                className="px-3 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-white/10 transition"
               >
                 {link.label}
               </a>

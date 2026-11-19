@@ -23,19 +23,22 @@ export default function Projects() {
       : portfolioData.projects.filter((p) => p.category === activeFilter);
 
   return (
-    <section id="proyek" className="py-20 md:py-28 relative border-t border-slate-900">
+    <section id="proyek" className="py-20 md:py-28 relative border-t border-white/5">
+      {/* Background Glow */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-950/60 border border-indigo-500/20 text-indigo-400 text-xs font-semibold tracking-wide uppercase mb-3">
-              <FolderGit2 className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill text-indigo-300 text-xs font-semibold tracking-wide uppercase mb-3 shadow-sm">
+              <FolderGit2 className="w-3.5 h-3.5 text-indigo-400" />
               <span>Portofolio Proyek</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
               Karya & Proyek Terpilih
             </h2>
-            <p className="mt-3 text-slate-400 text-base max-w-xl">
+            <p className="mt-3 text-slate-300 text-base max-w-xl font-normal">
               Eksplorasi aplikasi web nyata yang berfokus pada arsitektur scalable, pengalaman pengguna terbaik, dan performa tinggi.
             </p>
           </div>
@@ -47,10 +50,10 @@ export default function Projects() {
                 key={cat}
                 type="button"
                 onClick={() => setActiveFilter(cat)}
-                className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
+                className={`px-4 py-2 rounded-2xl text-xs sm:text-sm font-medium transition-all cursor-pointer ${
                   activeFilter === cat
-                    ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/30"
-                    : "bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:bg-slate-800"
+                    ? "bg-indigo-600 text-white shadow-xl shadow-indigo-600/40 border border-indigo-400/40"
+                    : "glass-card text-slate-300 hover:text-white hover:border-white/20"
                 }`}
               >
                 {cat}
@@ -64,7 +67,7 @@ export default function Projects() {
           {filteredProjects.map((project: Project) => (
             <div
               key={project.id}
-              className="flex flex-col rounded-3xl bg-slate-900/60 border border-slate-800/90 hover:border-slate-700/80 overflow-hidden group transition-all duration-300 hover:-translate-y-1.5 shadow-xl shadow-black/30"
+              className="flex flex-col rounded-3xl glass-card overflow-hidden group transition-all duration-300"
             >
               {/* Project Preview Header / Graphical Banner */}
               <div

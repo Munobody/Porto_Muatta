@@ -61,18 +61,19 @@ export const portfolioData = {
     tagline: "Bridging Modern Web & Mobile Engineering with Scalable Architecture & Human-Centered Design",
     bio: "Lulusan baru (Fresh Graduate) Informatika Universitas Syiah Kuala (IPK 3.61 / 4.00) dengan fondasi rekayasa perangkat lunak yang kokoh. Berpengalaman memimpin proyek Scrum di Bangkit Academy, mengajar DevOps & Web Programming sebagai Asisten Dosen, serta membangun aplikasi skala riil (React, TypeScript, Laravel, Kotlin, Tailwind).",
     availability: "Terbuka untuk Posisi Full-Time, Kontrak, atau Kolaborasi Proyek",
-    location: "Banda Aceh, Indonesia",
+    location: "Langsa, Indonesia",
     email: "muhariqmuatta27@gmail.com",
     phone: "+62-851-7217-2897",
     whatsapp: "https://wa.me/6285172172897",
     linkedin: "https://linkedin.com/in/muatta-muhariq",
     github: "https://github.com/Munobody",
+    avatarUrl: "/MuattaMuhariq_FullBody.jpg",
+    avatarCloseUpUrl: "/MuattaMuhariq_CloseUp.jpg",
     stats: {
       gpa: "3.61",
       gpaMax: "4.00",
-      susScore: "84.20", // Grade A SUS on SIPEMA
-      studentsMentored: "44+",
       projectsCompleted: "5+",
+      satisfaction: "100%",
     },
   },
 
@@ -98,8 +99,8 @@ export const portfolioData = {
       "Saya adalah Muatta Muhariq, fresh graduate Informatika dari Universitas Syiah Kuala dengan passion tinggi dalam pemrograman, antarmuka pengguna, dan prinsip rekayasa perangkat lunak modern. Terbiasa memadukan ketepatan logika backend, otomasi deployment (Docker, CI/CD), dan keindahan desain visual (Figma & Tailwind) untuk menghasilkan solusi teknologi yang berdampak nyata.",
     highlights: [
       {
-        title: "Usability Tested (SUS 84.20)",
-        desc: "Mendesain aplikasi SIPEMA yang diuji pada 28 responden dengan skor System Usability Scale 84.20 (Grade A - Excellent).",
+        title: "User-Centered & Clean Code",
+        desc: "Fokus pada arsitektur kode terstruktur rapi, performa responsif, dan pengalaman pengguna yang intuitif di berbagai perangkat.",
       },
       {
         title: "DevOps & Modern Workflow",
@@ -173,7 +174,7 @@ export const portfolioData = {
       skills: [
         { name: "Git & GitHub", level: "Mahir", description: "Version control, branching strategy, PR reviews, team collaboration" },
         { name: "Scrum & Agile (Jira)", level: "Mahir", description: "Sprint planning, user stories, task delegation, daily stand-up leader" },
-        { name: "System Usability Testing", level: "Mahir", description: "Metodologi SUS (System Usability Scale) bersertifikasi pengujian empiris" },
+        { name: "Code Quality & Testing", level: "Mahir", description: "Best practices penulisan kode modular, refactoring, dan pengujian fungsional" },
         { name: "CI/CD & DevOps Pipeline", level: "Menengah", description: "Otomasi testing, build verification, dan environment deployment" },
       ],
     },
@@ -199,10 +200,10 @@ export const portfolioData = {
       description: "Sistem pengaduan masyarakat kampus berbasis web responsif yang dilengkapi pelacakan status real-time dan hak akses terverifikasi.",
       longDescription: "Dikembangkan menggunakan React.js dan TypeScript untuk Universitas Syiah Kuala. Memungkinkan mahasiswa dan masyarakat mengajukan, mengkategorikan, serta memantau progres pengaduan ke unit terkait secara transparan.",
       imageGradient: "from-blue-700 via-indigo-700 to-slate-900",
-      metricsBadge: "SUS Score 84.20 (Grade A - Excellent)",
-      tags: ["React.js", "TypeScript", "Tailwind CSS", "REST API", "RBAC", "SUS Testing"],
+      metricsBadge: "Official Campus Platform",
+      tags: ["React.js", "TypeScript", "Tailwind CSS", "REST API", "RBAC", "UI/UX"],
       features: [
-        "Mendapat skor SUS 84.20 (Grade A - Excellent) dari uji usability 28 responden",
+        "Desain antarmuka responsif dan alur penanganan laporan pengaduan yang transparan",
         "Role-Based Access Control (Masyarakat, Admin Unit, Stakeholder Kampus)",
         "Notifikasi dan pelacakan status pengaduan langsung secara transparan",
         "Komponen modular dengan validasi client-side ketat dan error handling",
@@ -274,17 +275,17 @@ export const portfolioData = {
     {
       id: "docs-pbw",
       title: "Dokumentasi Praktikum PBW",
-      subtitle: "Online Documentation Resource for 44 Students",
+      subtitle: "Online Documentation & Practical Guide",
       category: "Open Source & Docs",
       description: "Portal dokumentasi materi praktikum Pemrograman Berbasis Web (PBW) untuk mahasiswa Informatika Universitas Syiah Kuala.",
-      longDescription: "Dibangun dan dikelola untuk mendampingi 44 mahasiswa dalam 16 pertemuan laboratorium mengenai dasar Linux, HTML, CSS, JavaScript, PHP, Laravel, Tailwind CSS, dan Git.",
+      longDescription: "Dibangun dan dikelola untuk mendampingi pembelajaran praktikum intensif dalam 16 pertemuan laboratorium mengenai dasar Linux, HTML, CSS, JavaScript, PHP, Laravel, Tailwind CSS, dan Git.",
       imageGradient: "from-cyan-700 via-blue-800 to-slate-900",
-      metricsBadge: "44 Mahasiswa • 16 Sesi",
+      metricsBadge: "16 Sesi Praktikum",
       tags: ["Documentation", "Web Programming", "Laravel", "Tailwind", "Git", "Education"],
       features: [
         "Materi terstruktur: Linux CLI, HTML/CSS, Modern JS, PHP, Laravel, Tailwind, Git",
-        "Akses materi dan studi kasus interaktif untuk 44 mahasiswa Informatika",
-        "Membantu pembelajaran praktis dan proyek kolaboratif mahasiswa",
+        "Akses materi dan panduan studi kasus interaktif untuk praktikum Informatika",
+        "Mendukung pembelajaran praktis dan proyek kolaboratif mahasiswa",
       ],
       demoUrl: "https://docs-pbw-inf-224.vercel.app/",
       githubUrl: "https://github.com/Munobody",
@@ -327,9 +328,9 @@ export const portfolioData = {
       organization: "Website-Based Programming Laboratory (PBW)",
       location: "Universitas Syiah Kuala, Banda Aceh",
       type: "Akademik / Laboratorium",
-      description: "Mengajar 44 mahasiswa dalam 16 sesi praktikum intensif pemrograman web modern dan ekosistem Linux.",
+      description: "Mendampingi mahasiswa dalam 16 sesi praktikum intensif pemrograman web modern dan ekosistem Linux.",
       achievements: [
-        "Mengedukasi 44 mahasiswa mengenai fundamental Linux, HTML, CSS, JavaScript, PHP, Laravel, Tailwind CSS, dan version control Git.",
+        "Membimbing mahasiswa mengenai fundamental Linux, HTML, CSS, JavaScript, PHP, Laravel, Tailwind CSS, dan version control Git.",
         "Merancang silabus modul praktikum, studi kasus proyek, serta metode pembelajaran interaktif dan diskusi solutif.",
         "Membangun dan mengelola website dokumentasi online resmi untuk mempermudah akses belajar: docs-pbw-inf-224.vercel.app.",
       ],
@@ -339,6 +340,18 @@ export const portfolioData = {
   ] as ExperienceItem[],
 
   organizations: [
+      {
+      period: "2025",
+      role: "Staff Ekonomi Kreatif",
+      organization: "Komite Nasional Pemuda Indonesia (KNPI) Banda Aceh)",
+      institution: "Kota Banda Aceh",
+      description: "Memegang tanggung jawab strategis dalam operasional organisasi kepemudaan tentang ekonomi kreatif dan hubungan kolaborasi eksternal.",
+      highlights: [
+        "Mendampingi Ketua Himpunan dalam perumusan kebijakan penting dan bertindak sebagai pelaksana tugas saat Ketua berhalangan.",
+        "Mengawasi jalannya divisi internal untuk memastikan seluruh program kerja akademik maupun kemahasiswaan terlaksana sesuai target.",
+        "Membangun dan memelihara kemitraan eksternal serta melakukan monitoring dan evaluasi berkala.",
+      ],
+    },
     {
       period: "2024",
       role: "Vice Chairman I (Wakil Ketua I)",
@@ -381,11 +394,11 @@ export const portfolioData = {
     {
       title: "Frontend Web Development",
       subtitle: "React.js • TypeScript • Next.js",
-      description: "Membangun antarmuka web interaktif, cepat, dan teruji kegunaannya (usability-tested) dengan desain responsif berbasis Tailwind CSS.",
+      description: "Membangun antarmuka web interaktif, cepat, dan modern dengan desain responsif berbasis Tailwind CSS.",
       icon: "Code2",
       deliverables: [
         "Implementasi pixel-perfect dari Figma ke kode nyata",
-        "Pengujian Usability Scale (SUS) untuk kepuasan pengguna",
+        "Desain antarmuka intuitif dan optimalisasi kenyamanan pengguna",
         "Komponen modular, type-safe (TypeScript), dan arsitektur rapi",
         "Optimasi Core Web Vitals & responsivitas multi-device",
       ],
@@ -446,7 +459,7 @@ export const portfolioData = {
       role: "Laboratorium PBW & PPL",
       company: "Universitas Syiah Kuala",
       avatar: "USK",
-      content: "Muatta menunjukkan dedikasi luar biasa sebagai asisten dosen. Materinya terstruktur rapi, dokumentasi daringnya sangat membantu 44 mahasiswa, dan pemahamannya terhadap Docker serta CI/CD sangat solid.",
+      content: "Muatta menunjukkan dedikasi luar biasa sebagai asisten dosen. Materinya terstruktur rapi, dokumentasi daringnya sangat membantu proses praktikum, dan pemahamannya terhadap Docker serta CI/CD sangat solid.",
     },
     {
       name: "Tim Kolaborator Capstone",
@@ -460,7 +473,7 @@ export const portfolioData = {
       role: "Usability Testing Team",
       company: "Sistem Pengaduan Masyarakat",
       avatar: "SP",
-      content: "Aplikasi SIPEMA karya Muatta terbukti sangat mudah digunakan dan responsif, terbukti dari skor SUS 84.20 (Grade A) yang dicapai. Alur pengaduan transparan dan antarmukanya ramah pengguna.",
+      content: "Aplikasi SIPEMA karya Muatta terbukti sangat mudah digunakan dan responsif. Alur pengaduan transparan serta tampilan antarmukanya modern dan ramah pengguna.",
     },
   ],
 

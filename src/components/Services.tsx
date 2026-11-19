@@ -20,28 +20,31 @@ export default function Services() {
   };
 
   return (
-    <section id="layanan" className="py-20 md:py-28 relative border-t border-slate-900">
+    <section id="layanan" className="py-20 md:py-28 relative border-t border-white/5">
+      {/* Background ambient light */}
+      <div className="absolute top-1/3 left-10 w-96 h-96 bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-950/60 border border-indigo-500/20 text-indigo-400 text-xs font-semibold tracking-wide uppercase mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill text-indigo-300 text-xs font-semibold tracking-wide uppercase mb-3 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
             <span>Solusi & Layanan</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
             Bagaimana Saya Bisa Membantu Proyek Anda
           </h2>
-          <p className="mt-4 text-slate-400 text-base sm:text-lg">
+          <p className="mt-4 text-slate-300 text-base sm:text-lg font-normal">
             Dari perencanaan arsitektur hingga deployment produksi, saya siap mewujudkan ide Anda menjadi aplikasi web yang tangguh.
           </p>
         </div>
 
-        {/* 4 Service Cards */}
+        {/* Service Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {portfolioData.services.map((service: ServiceItem) => (
             <div
               key={service.title}
-              className="p-8 rounded-3xl bg-slate-900/60 border border-slate-800/80 hover:border-indigo-500/40 transition-all duration-300 hover:-translate-y-1 group shadow-xl shadow-black/20 flex flex-col justify-between"
+              className="p-8 rounded-3xl glass-card flex flex-col justify-between"
             >
               <div>
                 <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center mb-6 group-hover:bg-indigo-500 group-hover:text-white transition-all">

@@ -10,9 +10,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-950 border-t border-slate-900 py-12 relative overflow-hidden">
+    <footer className="bg-slate-950/80 border-t border-white/5 py-12 relative overflow-hidden backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-800/80 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-white/5 items-center">
           {/* Brand info */}
           <div className="md:col-span-6 space-y-3">
             <a
@@ -27,7 +27,7 @@ export default function Footer() {
                 <span className="text-indigo-400">.dev</span>
               </span>
             </a>
-            <p className="text-sm text-slate-400 max-w-md">
+            <p className="text-sm text-slate-300 max-w-md font-normal">
               {portfolioData.personal.tagline}. Dirancang dan dikembangkan dengan standar rekayasa perangkat lunak modern.
             </p>
           </div>
@@ -38,7 +38,7 @@ export default function Footer() {
               href={portfolioData.personal.github}
               target="_blank"
               rel="noreferrer"
-              className="p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition"
+              className="p-3 rounded-2xl glass-card text-slate-300 hover:text-white hover:border-indigo-500/50 transition cursor-pointer"
               aria-label="GitHub"
             >
               <GithubIcon className="w-4 h-4" />
@@ -47,14 +47,14 @@ export default function Footer() {
               href={portfolioData.personal.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition"
+              className="p-3 rounded-2xl glass-card text-slate-300 hover:text-white hover:border-indigo-500/50 transition cursor-pointer"
               aria-label="LinkedIn"
             >
               <LinkedinIcon className="w-4 h-4" />
             </a>
             <a
               href={`mailto:${portfolioData.personal.email}`}
-              className="p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition"
+              className="p-3 rounded-2xl glass-card text-slate-300 hover:text-white hover:border-indigo-500/50 transition cursor-pointer"
               aria-label="Email"
             >
               <Mail className="w-4 h-4" />
@@ -63,7 +63,7 @@ export default function Footer() {
               href={portfolioData.personal.whatsapp}
               target="_blank"
               rel="noreferrer"
-              className="p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-emerald-400 hover:border-emerald-500/30 transition"
+              className="p-3 rounded-2xl glass-card text-slate-300 hover:text-emerald-400 hover:border-emerald-500/30 transition cursor-pointer"
               aria-label="WhatsApp"
             >
               <MessageSquare className="w-4 h-4" />
@@ -72,7 +72,7 @@ export default function Footer() {
             <button
               onClick={scrollToTop}
               type="button"
-              className="ml-2 flex items-center gap-2 px-4 py-3 rounded-xl bg-indigo-600/20 hover:bg-indigo-600 border border-indigo-500/30 text-indigo-300 hover:text-white text-xs font-semibold transition"
+              className="ml-2 flex items-center gap-2 px-4 py-3 rounded-2xl glass-card text-indigo-300 hover:text-white text-xs font-semibold transition cursor-pointer hover:border-indigo-400/40"
             >
               <span>Kembali ke Atas</span>
               <ArrowUp className="w-4 h-4" />
